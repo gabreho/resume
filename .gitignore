@@ -1,0 +1,16 @@
+# LaTeX compilation artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# macOS system files
+.DS_Store
+
+# Claude Code session files
+.claude
+
+# Supplemental source documents
+supplemental/

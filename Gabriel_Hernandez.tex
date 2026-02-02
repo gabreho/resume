@@ -1,0 +1,213 @@
+%-------------------------
+% Resume in Latex
+% Author : Gabriel Hernandez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Load personal info if available (phone number, etc.)
+% If file doesn't exist, define empty placeholder
+\IfFileExists{personal_info.tex}{\input{personal_info}}{\newcommand{\myPhone}{}}
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% Custom command for role headers (outdented to left margin, bold text)
+\newcommand{\resumeRoleHeader}[1]{
+  \vspace{6pt}
+  \item[]
+  \hspace{-0.15in}{\small\textbf{#1}}
+  \vspace{1pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% ----------HEADING----------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://gabreho.com/}{\Large Gabriel Hernandez}} & Email : \href{mailto:gabreho@gmail.com}{gabreho@gmail.com}\\
+  \href{https://linkedin.com/in/gabreho}{linkedin.com/in/gabreho} $|$ \href{https://github.com/gabreho}{github.com/gabreho} \ifx\myPhone\empty\else & Mobile : \myPhone \fi \\
+\end{tabular*}
+
+\section{Summary}
+
+\begin{justify}
+    \small Staff Software Engineer specializing in iOS platform architecture, developer productivity, and cross-team coordination. 15+ years from co-founding full-stack startups to leading iOS platform strategy at Square, with expertise in legacy modernization and enabling large-scale engineering organizations to deliver faster and more reliably.
+\end{justify}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Software Engineer $\rightarrow$ Staff Software Engineer}{February 2020 -- Present}
+      {Square / Block}{Toronto, ON}
+      \resumeItemListStart
+        \resumeRoleHeader{Staff Software Engineer / iOS Tech Lead (September 2025 -- Present)}
+        \resumeItem{iOS Tech Lead for Checkout Applet Mobile team, responsible for flagship Square POS main screen across all seller verticals.}
+        \resumeItem{iOS architecture expert for Converged Item Grid (evolved from Visual Browse), driving technical decisions and codebase evolution across unified POS.}
+        \resumeItem{Coordinated cross-functional effort with Restaurants org (PMs, designers, engineers) to design tabs architecture expansion, ensuring future compatibility for multi-mode adoption.}
+
+        \resumeRoleHeader{Senior Software Engineer / Retail iOS Platform Lead (March 2022 -- May 2025)}
+        \resumeItem{iOS Platform Lead for Retail Mobile Engineering org (25 mobile engineers, 12 iOS engineers across 3 teams).}
+        \resumeItem{Led architecture and rollout of Unified Checkout, removing 25,000+ lines of legacy code and increasing test coverage from 7\% to 50\%, contributing to iOS crash rates dropping to historical lows.}
+        \resumeItem{Enabled SuperPOS launch as Retail iOS representative, implementing mode-switching and shared infrastructure abstractions to unify Square's POS apps across verticals.}
+        \resumeItem{Migrated checkout navigation from brittle modal presentation logic to a structured, testable architecture, improving modularity and developer velocity.}
+        \resumeItem{Created oncall runbook for Retail Mobile defining iOS and Android oncall expectations and responsibilities, coordinating with EMs and leads across 25+ engineers.}
+        \resumeItem{Led Mobile Oncall Working Group across all POS teams, creating presentation materials (recorded), and coordinating automation to prevent dropped tickets in Waiting for Customers status.}
+
+        \resumeRoleHeader{Senior Software Engineer (February 2020 -- March 2022)}
+        \resumeItem{Designed and led Visual Browse iOS development, mentoring engineers and coordinating with Android and Restaurant teams to build catalog browser on shared infrastructure, now foundational to unified POS across verticals.}
+        \resumeItem{Enabled Retail POS international expansion by implementing address format customizations, feature flagging for regional compliance, and adapting fulfillment workflows for multiple countries.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Lead Mobile Developer}{September 2017 -- January 2020}
+      {Skrumble Technologies}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Led mobile engineering and cross-platform coordination, managing team of developers including junior engineers and aligning technical decisions with Android lead on WebRTC protocols and messaging formats.}
+        \resumeItem{Resolved critical WebRTC reliability issues in video/audio calling, redesigning VoIP connection architecture, modularizing library, and coordinating signal management across iOS and Android clients.}
+        \resumeItem{Architected greenfield iOS app with blockchain capabilities, creating UI component system with "safe rails" for junior engineers, Ethereum SDK for blockchain integration, and end-to-end encryption using Signal Protocol.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Senior Software Engineer}{October 2016 -- September 2018}
+      {Girls Who Code}{Remote}
+      \resumeItemListStart
+        \resumeItem{Improved iOS and Android loading times by 400\% by redesigning API calls, optimizing database queries, and implementing local caches.}
+        \resumeItem{Designed and implemented new timeline-based homepages for iOS and Android applications with Django API endpoints.}
+        \resumeItem{Resolved critical push notification reliability issue where APNS-only approach failed to deliver content. Built Django backend with API and updated clients for guaranteed delivery.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Co-Founder, Principal Software Engineer}{May 2013 -- December 2016}
+      {GlobalMET}{Hermosillo, Mexico}
+      \resumeItemListStart
+        \resumeItem{Co-founded and served as Director of Technology for GlobalMET, Mexico's first coordinate-specific weather platform for rural areas, building auto-scaling distributed system on GCP processing NOAA satellite data to generate 21-day forecasts for agricultural clients across Sonora and Sinaloa.}
+        \resumeItem{Engineered agricultural alert system with Django/PostgreSQL backend enabling farmers to receive automated SMS/push/email notifications when forecasts met crop-specific thresholds (frost warnings, optimal spray conditions, pest risk), improving production efficiency.}
+        \resumeItem{Built full-stack platform including iOS app, macOS meteorologist tools for forecast refinement, and API infrastructure, creating disruptive innovation validated as more accurate than Weather Channel for rural Mexico.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {iOS \& Backend Engineer / Co-Founder}{January 2010 -- September 2017}
+      {Big Bang Dev}{Hermosillo, Mexico}
+      \resumeItemListStart
+        \resumeItem{CiVO: Built full-stack VoIP and chat application (backend, iOS, Android) enabling free calls to landlines.}
+        \resumeItem{UNE Transporte Sonora: Developed real-time vehicle tracking system (backend, iOS) for public transit across Sonora, Mexico.}
+        \resumeItem{BuddyCard: Developed full-stack loyalty platform with Django backend/API, iOS app for venue discovery and rewards tracking, tablet app for merchant check-ins and redemptions, managing point accumulation across multiple partner businesses.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Tecnológico de Monterrey}{Hermosillo, Mexico}
+      {Bachelor of Science - Information and Communications Technologies (Graduated with Honors)}{Aug. 2007 -- Dec. 2011}
+    \resumeSubheading
+      {Concordia University}{Montreal, QC}
+      {Computer Science Student Exchange Program}{Aug. 2010 -- Dec. 2010}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Swift, Objective-C} \\
+     \textbf{iOS Development}{: UIKit, Blueprint, SwiftUI, Workflow} \\
+     \textbf{Architecture \& Patterns}{: Protocol-Oriented Programming, Dependency Injection, Modular Architecture} \\
+     \textbf{Platform Leadership}{: iOS Platform Architecture, Cross-Team Coordination, Developer Productivity, Code Quality \& Testing} \\
+     \textbf{Specialized}{: WebRTC, RPC, Signal Protocol Encryption} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
