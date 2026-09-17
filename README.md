@@ -14,10 +14,19 @@ Staff Software Engineer specializing in iOS platform architecture, developer pro
 
 ## Experience
 
-### Square / Block — *Toronto, ON*
-**Senior Software Engineer → Staff Software Engineer** | *February 2020 - Present*
+### Shopify — *Remote*
+**Senior Software Engineer** | *May 2026 - Present*
 
-**Staff Software Engineer / iOS Tech Lead** | *September 2025 - Present*
+- Revamped staff sale attribution in the POS and designed the migration strategy for rolling out new rules and permissions
+- Redesigned mobile cart form factor, streamlining cart presentation and enabling cart visibility across multiple areas of the app
+- Architecting backend API contract (React Native / Ruby) to support custom rules gating checkout and dynamically required fields alongside line items
+
+---
+
+### Square / Block — *Toronto, ON*
+**Senior Software Engineer → Staff Software Engineer** | *February 2020 - February 2026*
+
+**Staff Software Engineer / iOS Tech Lead** | *September 2025 - February 2026*
 - iOS Tech Lead for Checkout Applet Mobile team, responsible for flagship Square POS main screen across all seller verticals
 - iOS architecture expert for Converged Item Grid (evolved from Visual Browse), driving technical decisions and codebase evolution across unified POS
 - Coordinated cross-functional effort with Restaurants org (PMs, designers, engineers) to design tabs architecture expansion, ensuring future compatibility for multi-mode adoption
@@ -106,4 +115,4 @@ pdflatex Gabriel_Hernandez.tex
 
 ---
 
-*Last updated: January 2026*
+*Last updated: September 2026*
